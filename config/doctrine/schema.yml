@@ -1,0 +1,35 @@
+quests:
+  columns:
+    id: { type: integer, notnull: true, unique: true }
+    uuid: { type: string(255), notnull: true, unique: true }
+    name: { type: string(255), notnull: true, unique: false }
+    description: { type: string(255), notnull: false, unique: false }
+    location: { type: string(255), notnull: false, unique: false }
+    items: { type: string(255), notnull: false, unique: false }
+    item_chance: { type: integer, notnull: false, unique: false }
+    monster: { type: string(255), notnull: false, unique: false }
+    monster_chance: { type: integer, notnull: false, unique: false }
+    status: { type: string(255), notnull: false, unique: false }
+    party_id: { type: string(255), notnull: false, unique: false }
+    creation: { type: timestamp, notnull: true }
+    expires: { type: timestamp, notnull: true }
+
+items:
+  columns:
+    id: { type: integer, notnull: true, unique: true }
+    uuid: { type: integer, notnull: true, unique: true }
+    name: { type: string(255), notnull: true, unique: false }
+    description: { type: string(255), notnull: false, unique: false }
+    price: { type: integer, notnull: false, unique: false }
+    unique_item: { type: boolean, notnull: true, default: 0 }
+    party_id: { type: string(255), notnull: false, unique: false }
+    creation: { type: timestamp, notnull: true }
+
+monster:
+  columns:
+    id: { type: integer, notnull: true, unique: true }
+    uuid: { type: integer, notnull: true, unique: true }
+    name: { type: string(255), notnull: true, unique: false }
+    description: { type: string(255), notnull: false, unique: false }
+    party_id: { type: string(255), notnull: false, unique: false }
+    creation: { type: timestamp, notnull: true }

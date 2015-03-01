@@ -1,0 +1,3 @@
+CREATE TABLE items (id BIGINT NOT NULL, uuid BIGINT NOT NULL, name VARCHAR(255) NOT NULL, description VARCHAR(255), price BIGINT, unique_item BOOLEAN DEFAULT 'false' NOT NULL, party_id VARCHAR(255), creation TIMESTAMP NOT NULL);
+CREATE TABLE monster (id BIGINT NOT NULL, uuid BIGINT NOT NULL, name VARCHAR(255) NOT NULL, description VARCHAR(255), party_id VARCHAR(255), creation TIMESTAMP NOT NULL);
+CREATE TABLE quests (id BIGINT NOT NULL, uuid VARCHAR(255) NOT NULL UNIQUE, name VARCHAR(255) NOT NULL, description VARCHAR(255), location VARCHAR(255), items VARCHAR(255), item_chance BIGINT, monster VARCHAR(255), monster_chance BIGINT, status VARCHAR(255), party_id VARCHAR(255), creation TIMESTAMP NOT NULL, expires TIMESTAMP NOT NULL);
