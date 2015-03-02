@@ -17,9 +17,10 @@ quests:
 items:
   columns:
     id: { type: integer, notnull: true, unique: true }
-    uuid: { type: integer, notnull: true, unique: true }
+    uuid: { type: string(255), notnull: true, unique: true }
     name: { type: string(255), notnull: true, unique: false }
     description: { type: string(255), notnull: false, unique: false }
+    shopable: { type: string(255), notnull: false, unique: false }
     price: { type: integer, notnull: false, unique: false }
     unique_item: { type: boolean, notnull: true, default: 0 }
     party_id: { type: string(255), notnull: false, unique: false }
@@ -28,8 +29,40 @@ items:
 monster:
   columns:
     id: { type: integer, notnull: true, unique: true }
-    uuid: { type: integer, notnull: true, unique: true }
+    uuid: { type: string(255), notnull: true, unique: true }
     name: { type: string(255), notnull: true, unique: false }
     description: { type: string(255), notnull: false, unique: false }
     party_id: { type: string(255), notnull: false, unique: false }
+    creation: { type: timestamp, notnull: true }
+
+user:
+  columns:
+    id: { type: integer, notnull: true, unique: true }
+    uuid: { type: string(255), notnull: true, unique: true }
+    username: { type: string(255), notnull: true, unique: true }
+    lastname: { type: string(255), notnull: true, unique: false }
+    firstname: { type: string(255), notnull: true, unique: false }
+    email: { type: string(255), notnull: true, unique: true }
+    password: { type: string(255), notnull: true, unique: false }
+    hash: { type: string(255), notnull: true, unique: false }
+    salt: { type: string(255), notnull: true, unique: false }
+    party_id: { type: integer, notnull: true, unique: false }
+    creation: { type: timestamp, notnull: true }
+
+party:
+  columns:
+    id: { type: integer, notnull: true, unique: true }
+    uuid: { type: string(255), notnull: true, unique: true }
+    name: { type: string(255), notnull: true, unique: true }
+    admin_id: { type: integer, notnull: true, unique: false }
+    creation: { type: timestamp, notnull: true }
+
+character:
+  columns:
+    id: { type: integer, notnull: true, unique: true }
+    uuid: { type: string(255), notnull: true, unique: true }
+    name: { type: string(255), notnull: true, unique: true }
+    user_id: { type: integer, notnull: true, unique: true }
+    party_id: { type: integer, notnull: true, unique: true }
+    blocked: { type: boolean, notnull: true, default: 0 }
     creation: { type: timestamp, notnull: true }
