@@ -1,5 +1,6 @@
 #Login Module
 
 ##Functionallity
-- Login
-- Registration
+- login
+- registration
+- reset password
