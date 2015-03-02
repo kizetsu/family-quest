@@ -7,3 +7,4 @@ administration backend
 - adding and publishing news
 - setting frontend to maintenance
 - setting werbserv to maintenance
+- editing / deleting users
