@@ -1,0 +1,32 @@
+Mar 04 23:54:06 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 23:54:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:54:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:54:06 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 23:54:06 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 23:54:06 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:54:06 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:54:06 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:54:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:54:06 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:54:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:54:06 symfony [info] {sfWebDebugLogger} Configuration 295.33 ms (9)
+Mar 04 23:54:06 symfony [info] {sfWebDebugLogger} Factories 195.54 ms (1)
+Mar 04 23:54:06 symfony [info] {sfWebDebugLogger} Action "default/index" 0.42 ms (1)
+Mar 04 23:54:06 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 21.39 ms (1)
+Mar 04 23:54:06 symfony [info] {sfWebResponse} Send content (28512 o)
+Mar 04 23:55:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 23:55:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:55:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:55:07 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 23:55:07 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 23:55:07 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:55:07 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:55:07 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:55:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:55:07 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:55:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:55:07 symfony [info] {sfWebDebugLogger} Configuration 1.57 ms (9)
+Mar 04 23:55:07 symfony [info] {sfWebDebugLogger} Factories 14.71 ms (1)
+Mar 04 23:55:07 symfony [info] {sfWebDebugLogger} Action "default/index" 0.31 ms (1)
+Mar 04 23:55:07 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 11.11 ms (1)
+Mar 04 23:55:07 symfony [info] {sfWebResponse} Send content (28540 o)

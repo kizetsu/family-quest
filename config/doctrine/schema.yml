@@ -1,6 +1,6 @@
 quests:
   columns:
-    id: { type: integer, notnull: true, unique: true }
+    id: { type: integer, notnull: true, unique: true, primary: true, autoincrement: true }
     uuid: { type: string(255), notnull: true, unique: true }
     name: { type: string(255), notnull: true, unique: false }
     description: { type: string(255), notnull: false, unique: false }
@@ -16,7 +16,7 @@ quests:
 
 items:
   columns:
-    id: { type: integer, notnull: true, unique: true }
+    id: { type: integer, notnull: true, unique: true, primary: true, autoincrement: true }
     uuid: { type: string(255), notnull: true, unique: true }
     name: { type: string(255), notnull: true, unique: false }
     description: { type: string(255), notnull: false, unique: false }
@@ -28,16 +28,16 @@ items:
 
 monster:
   columns:
-    id: { type: integer, notnull: true, unique: true }
+    id: { type: integer, notnull: true, unique: true, primary: true, autoincrement: true }
     uuid: { type: string(255), notnull: true, unique: true }
     name: { type: string(255), notnull: true, unique: false }
     description: { type: string(255), notnull: false, unique: false }
     party_id: { type: string(255), notnull: false, unique: false }
     creation: { type: timestamp, notnull: true }
 
-user:
+users:
   columns:
-    id: { type: integer, notnull: true, unique: true }
+    id: { type: integer, notnull: true, unique: true, primary: true, autoincrement: true }
     uuid: { type: string(255), notnull: true, unique: true }
     username: { type: string(255), notnull: true, unique: true }
     lastname: { type: string(255), notnull: true, unique: false }
@@ -46,12 +46,21 @@ user:
     password: { type: string(255), notnull: true, unique: false }
     hash: { type: string(255), notnull: true, unique: false }
     salt: { type: string(255), notnull: true, unique: false }
-    party_id: { type: integer, notnull: true, unique: false }
+    group_id: { type: integer, notnull: true, unique: false }
+    party_id: { type: integer, notnull: false, unique: false }
+    creation: { type: timestamp, notnull: true }
+
+groups:
+  columns:
+    id: { type: integer, notnull: true, unique: true, primary: true, autoincrement: true, primary: true, autoincrement: true }
+    uuid: { type: string(255), notnull: true, unique: true }
+    groupname: { type: string(255), notnull: true, unique: true }
+    description: { type: string(255), notnull: false, unique: true }
     creation: { type: timestamp, notnull: true }
 
 party:
   columns:
-    id: { type: integer, notnull: true, unique: true }
+    id: { type: integer, notnull: true, unique: true, primary: true, autoincrement: true }
     uuid: { type: string(255), notnull: true, unique: true }
     name: { type: string(255), notnull: true, unique: true }
     admin_id: { type: integer, notnull: true, unique: false }
@@ -59,7 +68,7 @@ party:
 
 character:
   columns:
-    id: { type: integer, notnull: true, unique: true }
+    id: { type: integer, notnull: true, unique: true, primary: true, autoincrement: true }
     uuid: { type: string(255), notnull: true, unique: true }
     name: { type: string(255), notnull: true, unique: true }
     user_id: { type: integer, notnull: true, unique: true }

@@ -1,0 +1,279 @@
+Mar 04 22:37:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 22:37:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 22:37:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 22:37:13 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 22:37:13 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 22:37:13 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 22:37:13 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 22:37:13 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 22:37:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 22:37:13 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 22:37:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 22:37:13 symfony [info] {sfWebDebugLogger} Configuration 185.73 ms (9)
+Mar 04 22:37:13 symfony [info] {sfWebDebugLogger} Factories 178.04 ms (1)
+Mar 04 22:37:13 symfony [info] {sfWebDebugLogger} Action "default/index" 0.29 ms (1)
+Mar 04 22:37:13 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 33.12 ms (1)
+Mar 04 22:37:13 symfony [info] {sfWebResponse} Send content (28530 o)
+Mar 04 22:37:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 22:38:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 22:38:24 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 22:38:52 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 22:38:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 22:38:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 22:38:52 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 22:38:52 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php on line 22 (Trying to get property of non-object)
+Mar 04 22:38:53 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 22:38:53 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "") - ()
+Mar 04 22:38:53 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:38:53 symfony [err] {Doctrine_Connection_Pgsql_Exception} SQLSTATE[42601]: Syntax error: 7 ERROR:  zero-length delimited identifier at or near """"
+LINE 1: ...creation AS i__creation FROM items i WHERE (i.party_id = "")
+                                                                    ^. Failing Query: "SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "")"
+Mar 04 22:38:53 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:38:53 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:38:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Mar 04 22:38:53 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:38:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 22:38:53 symfony [info] {sfWebDebugLogger} Configuration 23.56 ms (9)
+Mar 04 22:38:53 symfony [info] {sfWebDebugLogger} Factories 14.70 ms (1)
+Mar 04 22:38:53 symfony [info] {sfWebDebugLogger} Action "items/index" 1014.40 ms (1)
+Mar 04 22:38:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 57.13 ms (1)
+Mar 04 22:39:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 22:39:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 22:39:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 22:39:42 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 22:39:42 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php on line 22 (Trying to get property of non-object)
+Mar 04 22:39:42 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 22:39:42 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "") - ()
+Mar 04 22:39:42 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:39:42 symfony [err] {Doctrine_Connection_Pgsql_Exception} SQLSTATE[42601]: Syntax error: 7 ERROR:  zero-length delimited identifier at or near """"
+LINE 1: ...creation AS i__creation FROM items i WHERE (i.party_id = "")
+                                                                    ^. Failing Query: "SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "")"
+Mar 04 22:39:42 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:39:42 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:39:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Mar 04 22:39:42 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:39:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 22:39:42 symfony [info] {sfWebDebugLogger} Configuration 306.17 ms (8)
+Mar 04 22:39:42 symfony [info] {sfWebDebugLogger} Factories 212.33 ms (1)
+Mar 04 22:39:42 symfony [info] {sfWebDebugLogger} Action "items/index" 386.40 ms (1)
+Mar 04 22:39:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 81.21 ms (1)
+Mar 04 22:52:38 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 22:52:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 22:52:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 22:52:38 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 22:52:38 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php on line 22 (Trying to get property of non-object)
+Mar 04 22:52:38 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 22:52:38 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "") - ()
+Mar 04 22:52:38 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:52:38 symfony [err] {Doctrine_Connection_Pgsql_Exception} SQLSTATE[42601]: Syntax error: 7 ERROR:  zero-length delimited identifier at or near """"
+LINE 1: ...creation AS i__creation FROM items i WHERE (i.party_id = "")
+                                                                    ^. Failing Query: "SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "")"
+Mar 04 22:52:38 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:52:38 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:52:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Mar 04 22:52:38 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:52:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 22:52:38 symfony [info] {sfWebDebugLogger} Configuration 77.63 ms (9)
+Mar 04 22:52:38 symfony [info] {sfWebDebugLogger} Factories 125.80 ms (1)
+Mar 04 22:52:38 symfony [info] {sfWebDebugLogger} Action "items/index" 269.12 ms (1)
+Mar 04 22:52:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.61 ms (1)
+Mar 04 22:57:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 22:57:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 22:57:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 22:57:33 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 22:57:33 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php on line 22 (Trying to get property of non-object)
+Mar 04 22:57:33 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 22:57:33 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "") - ()
+Mar 04 22:57:33 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:57:33 symfony [err] {Doctrine_Connection_Pgsql_Exception} SQLSTATE[42601]: Syntax error: 7 ERROR:  zero-length delimited identifier at or near """"
+LINE 1: ...creation AS i__creation FROM items i WHERE (i.party_id = "")
+                                                                    ^. Failing Query: "SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "")"
+Mar 04 22:57:33 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:57:33 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:57:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Mar 04 22:57:33 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 22:57:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 22:57:33 symfony [info] {sfWebDebugLogger} Configuration 54.77 ms (9)
+Mar 04 22:57:33 symfony [info] {sfWebDebugLogger} Factories 10.77 ms (1)
+Mar 04 22:57:33 symfony [info] {sfWebDebugLogger} Action "items/index" 124.88 ms (1)
+Mar 04 22:57:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.55 ms (1)
+Mar 04 23:05:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 23:05:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:05:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:05:46 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 23:05:46 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php on line 22 (Trying to get property of non-object)
+Mar 04 23:05:47 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 23:05:47 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "") - ()
+Mar 04 23:05:47 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 23:05:47 symfony [err] {Doctrine_Connection_Pgsql_Exception} SQLSTATE[42601]: Syntax error: 7 ERROR:  zero-length delimited identifier at or near """"
+LINE 1: ...creation AS i__creation FROM items i WHERE (i.party_id = "")
+                                                                    ^. Failing Query: "SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i WHERE (i.party_id = "")"
+Mar 04 23:05:47 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/exception/sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 23:05:47 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 23:05:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Mar 04 23:05:47 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/apps/frontend/modules/items/actions/actions.class.php:22))
+Mar 04 23:05:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:05:47 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (8)
+Mar 04 23:05:47 symfony [info] {sfWebDebugLogger} Factories 16.21 ms (1)
+Mar 04 23:05:47 symfony [info] {sfWebDebugLogger} Action "items/index" 142.04 ms (1)
+Mar 04 23:05:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 3.19 ms (1)
+Mar 04 23:06:24 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 23:06:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:06:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:06:24 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 23:06:24 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 23:06:24 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i - ()
+Mar 04 23:06:25 symfony [info] {sfPHPView} Render "/var/www/family-quest/apps/frontend/modules/items/templates/indexSuccess.php"
+Mar 04 23:06:37 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 23:06:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:06:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:06:37 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 23:06:37 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 23:06:37 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i - ()
+Mar 04 23:06:37 symfony [info] {sfPHPView} Render "/var/www/family-quest/apps/frontend/modules/items/templates/indexSuccess.php"
+Mar 04 23:07:10 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 23:07:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:07:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:07:10 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 23:07:10 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 23:07:10 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i - ()
+Mar 04 23:07:10 symfony [info] {sfPHPView} Render "/var/www/family-quest/apps/frontend/modules/items/templates/indexSuccess.php"
+Mar 04 23:08:36 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 23:08:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:08:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:08:36 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 23:08:37 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 23:08:37 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i - ()
+Mar 04 23:08:37 symfony [info] {sfPHPView} Render "/var/www/family-quest/apps/frontend/modules/items/templates/indexSuccess.php"
+Mar 04 23:12:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 23:12:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:12:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:12:04 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 23:12:04 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 23:12:04 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i - ()
+Mar 04 23:12:24 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 23:12:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:12:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:12:24 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 23:12:24 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 23:12:24 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i - ()
+Mar 04 23:12:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:12:24 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:12:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:12:24 symfony [info] {sfWebDebugLogger} Configuration 1.35 ms (8)
+Mar 04 23:12:24 symfony [info] {sfWebDebugLogger} Factories 11.38 ms (1)
+Mar 04 23:12:24 symfony [info] {sfWebDebugLogger} Action "items/index" 31.46 ms (1)
+Mar 04 23:12:24 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.33 ms (2)
+Mar 04 23:12:24 symfony [info] {sfWebDebugLogger} View "None" for "items/index" 0.01 ms (1)
+Mar 04 23:12:24 symfony [info] {sfWebResponse} Send content (18588 o)
+Mar 04 23:26:10 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 23:26:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:26:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:26:11 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 23:26:11 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 23:26:11 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:26:11 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:26:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:26:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:26:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:26:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:26:11 symfony [info] {sfWebDebugLogger} Configuration 38.57 ms (10)
+Mar 04 23:26:11 symfony [info] {sfWebDebugLogger} Factories 8.69 ms (1)
+Mar 04 23:26:11 symfony [info] {sfWebDebugLogger} Action "default/index" 0.34 ms (1)
+Mar 04 23:26:11 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 30.87 ms (1)
+Mar 04 23:26:11 symfony [info] {sfWebResponse} Send content (28526 o)
+Mar 04 23:31:23 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 23:31:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:31:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:31:23 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 23:31:23 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 23:31:23 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:31:23 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:31:23 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:31:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:31:23 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:31:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:31:23 symfony [info] {sfWebDebugLogger} Configuration 1.50 ms (9)
+Mar 04 23:31:23 symfony [info] {sfWebDebugLogger} Factories 12.92 ms (1)
+Mar 04 23:31:23 symfony [info] {sfWebDebugLogger} Action "default/index" 0.37 ms (1)
+Mar 04 23:31:23 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 11.05 ms (1)
+Mar 04 23:31:23 symfony [info] {sfWebResponse} Send content (28558 o)
+Mar 04 23:33:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 23:33:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:33:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:33:59 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 23:33:59 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 23:33:59 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:33:59 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:33:59 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:33:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:33:59 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:33:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:33:59 symfony [info] {sfWebDebugLogger} Configuration 1.49 ms (9)
+Mar 04 23:33:59 symfony [info] {sfWebDebugLogger} Factories 14.42 ms (1)
+Mar 04 23:33:59 symfony [info] {sfWebDebugLogger} Action "default/index" 0.29 ms (1)
+Mar 04 23:33:59 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 11.26 ms (1)
+Mar 04 23:33:59 symfony [info] {sfWebResponse} Send content (28558 o)
+Mar 04 23:34:14 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 23:34:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:34:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:34:14 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 23:34:14 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 23:34:14 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:34:14 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:34:14 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:34:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:34:14 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:34:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:34:14 symfony [info] {sfWebDebugLogger} Configuration 3.04 ms (9)
+Mar 04 23:34:14 symfony [info] {sfWebDebugLogger} Factories 13.21 ms (1)
+Mar 04 23:34:14 symfony [info] {sfWebDebugLogger} Action "default/index" 0.30 ms (1)
+Mar 04 23:34:14 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 7.90 ms (1)
+Mar 04 23:34:14 symfony [info] {sfWebResponse} Send content (28556 o)
+Mar 04 23:36:32 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 23:36:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:36:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:36:32 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 23:36:32 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 23:36:32 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:36:32 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:36:32 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:36:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:36:32 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:36:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:36:32 symfony [info] {sfWebDebugLogger} Configuration 7.43 ms (9)
+Mar 04 23:36:32 symfony [info] {sfWebDebugLogger} Factories 11.87 ms (1)
+Mar 04 23:36:32 symfony [info] {sfWebDebugLogger} Action "default/index" 0.30 ms (1)
+Mar 04 23:36:32 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 10.72 ms (1)
+Mar 04 23:36:32 symfony [info] {sfWebResponse} Send content (28559 o)
+Mar 04 23:47:00 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 04 23:47:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:47:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:47:00 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 04 23:47:01 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 04 23:47:01 symfony [info] {sfPHPView} Decorate content with "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:47:01 symfony [info] {sfPHPView} Render "/var/www/family-quest/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 04 23:47:01 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:47:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:47:01 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:47:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:47:01 symfony [info] {sfWebDebugLogger} Configuration 319.57 ms (9)
+Mar 04 23:47:01 symfony [info] {sfWebDebugLogger} Factories 404.57 ms (1)
+Mar 04 23:47:01 symfony [info] {sfWebDebugLogger} Action "default/index" 0.39 ms (1)
+Mar 04 23:47:01 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 145.44 ms (1)
+Mar 04 23:47:01 symfony [info] {sfWebResponse} Send content (28532 o)
+Mar 04 23:57:59 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /items with parameters array (  'module' => 'items',  'action' => 'index',)
+Mar 04 23:57:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 04 23:57:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 04 23:57:59 symfony [info] {itemsActions} Call "itemsActions->executeIndex()"
+Mar 04 23:57:59 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 04 23:58:00 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT i.id AS i__id, i.uuid AS i__uuid, i.name AS i__name, i.description AS i__description, i.shopable AS i__shopable, i.price AS i__price, i.unique_item AS i__unique_item, i.party_id AS i__party_id, i.creation AS i__creation FROM items i - ()
+Mar 04 23:58:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 04 23:58:00 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/family-quest/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 04 23:58:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 04 23:58:00 symfony [info] {sfWebDebugLogger} Configuration 28.49 ms (9)
+Mar 04 23:58:00 symfony [info] {sfWebDebugLogger} Factories 15.27 ms (1)
+Mar 04 23:58:00 symfony [info] {sfWebDebugLogger} Action "items/index" 586.59 ms (1)
+Mar 04 23:58:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 154.87 ms (2)
+Mar 04 23:58:00 symfony [info] {sfWebDebugLogger} View "None" for "items/index" 0.01 ms (1)
+Mar 04 23:58:00 symfony [info] {sfWebResponse} Send content (18560 o)

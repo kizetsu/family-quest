@@ -58,8 +58,9 @@ abstract class Basequests extends sfDoctrineRecord
         $this->setTableName('quests');
         $this->hasColumn('id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
              'unique' => true,
+             'primary' => true,
+             'autoincrement' => true,
              ));
         $this->hasColumn('uuid', 'string', 255, array(
              'type' => 'string',

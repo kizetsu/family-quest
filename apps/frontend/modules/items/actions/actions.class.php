@@ -17,6 +17,11 @@ class itemsActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+    	$this->Items = Doctrine::getTable('items')
+    	->createQuery()
+    	// ->where('party_id = "'.$this->user->party_id.'"')
+    	->execute();
+
+    	// return sfView::NONE;
   }
 }
